@@ -1,0 +1,11 @@
+git rev-parse --is-inside-work-tree:
+    - Verifies if the current directory is part of a Git repository.
+git branch --show-current:
+    - Fetches the name of the current Git branch.
+git status --porcelain:
+    - Checks for uncommitted changes. The output will be non-empty if there are changes.
+Color Codes:
+    - %F{196}: Red for changes (uncommitted state).
+    - %F{34}: Green for clean state.
+
+The PROMPT dynamically calls git_status_prompt, adding Git info when in a Git repository.
